@@ -1,0 +1,85 @@
+<!--
+titulo: Contato · Contáser Contabilidade
+descricao: Fale com a Contáser: telefone (49) 3322-5766, Rua Sicília, 88D, Centro, Chapecó/SC. Envie sua mensagem e um contador responde.
+pagina: contato
+-->
+
+<section class="page-hero wrap" aria-labelledby="titulo-pagina">
+  <canvas data-ambient aria-hidden="true"></canvas>
+  <div class="inner">
+    <nav class="crumbs intro" aria-label="Você está em"><a href="index.html">Início</a><span>/</span>Contato</nav>
+    <p class="eyebrow intro" style="--dl:.05s">Contato</p>
+    <h1 class="display intro" id="titulo-pagina" style="--dl:.12s">Fale com <span class="serif grad">a Contáser</span></h1>
+    <p class="lead intro" style="--dl:.2s">Estamos no centro de Chapecó. Ligue, mande uma mensagem ou venha tomar um café com a gente.</p>
+  </div>
+</section>
+
+<section class="wrap section" style="padding-top:0" aria-label="Canais de contato">
+  <div class="contact-grid">
+    <div style="display:grid;gap:16px;align-content:start">
+      <div class="info-list reveal">
+        <div class="info" data-cfg-wrap="whatsapp" hidden>
+          <span class="icon-box"><svg aria-hidden="true"><use href="#i-msg"/></svg></span>
+          <div><div class="k">WhatsApp</div><div class="v"><a data-cfg="whatsapp" href="#"></a></div></div>
+        </div>
+        <div class="info">
+          <span class="icon-box"><svg aria-hidden="true"><use href="#i-phone"/></svg></span>
+          <div><div class="k">Telefone</div><div class="v mono"><a href="tel:+554933225766">(49) 3322-5766</a></div></div>
+          <button class="copy-btn" type="button" data-copy="(49) 3322-5766" aria-label="Copiar telefone"><svg aria-hidden="true"><use href="#i-copy"/></svg></button>
+        </div>
+        <div class="info" data-cfg-wrap="email" hidden>
+          <span class="icon-box"><svg aria-hidden="true"><use href="#i-mail"/></svg></span>
+          <div><div class="k">E-mail</div><div class="v"><a data-cfg="email" href="#"></a></div></div>
+        </div>
+        <div class="info">
+          <span class="icon-box"><svg aria-hidden="true"><use href="#i-pin"/></svg></span>
+          <div><div class="k">Endereço</div><div class="v">Rua Sicília, 88D, Centro<br>Chapecó/SC · CEP 89805-020</div></div>
+          <button class="copy-btn" type="button" data-copy="Rua Sicília, 88D, Centro, Chapecó/SC, CEP 89805-020" aria-label="Copiar endereço"><svg aria-hidden="true"><use href="#i-copy"/></svg></button>
+        </div>
+        <div class="info" data-cfg-wrap="horario" hidden>
+          <span class="icon-box"><svg aria-hidden="true"><use href="#i-clock"/></svg></span>
+          <div><div class="k">Horário de atendimento</div><div class="v" data-cfg="horario"></div></div>
+        </div>
+      </div>
+      <div class="map-card reveal" style="--dl:.08s">
+        <canvas id="map" aria-hidden="true"></canvas>
+        <div class="z">
+          <div><p class="label" style="color:rgba(255,255,255,.5)">Sede própria</p><p style="margin:4px 0 0;font-size:17px;font-weight:500">Centro de Chapecó</p></div>
+          <a class="btn btn-primary sm" href="https://www.google.com/maps/search/?api=1&amp;query=Rua+Sic%C3%ADlia%2C+88D%2C+Centro%2C+Chapec%C3%B3+-+SC%2C+89805-020" target="_blank" rel="noopener">Abrir no Google Maps<svg class="mvu" aria-hidden="true"><use href="#i-arrowur"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-card reveal" id="formulario" style="--dl:.1s;scroll-margin-top:100px">
+      <form class="form" id="form-contato" novalidate>
+        <div>
+          <h2 class="h3" style="margin-bottom:4px">Prefere que a gente entre em contato?</h2>
+          <p class="small" style="margin:0">Preencha e um contador retorna.</p>
+        </div>
+        <div class="f2">
+          <div class="field" data-req><input id="f-nome" name="nome" placeholder=" " autocomplete="name" required><label for="f-nome">Nome</label><span class="msg">Informe seu nome.</span></div>
+          <div class="field"><input id="f-empresa" name="empresa" placeholder=" " autocomplete="organization"><label for="f-empresa">Empresa</label></div>
+        </div>
+        <div class="field" data-req data-phone><input id="f-telefone" name="telefone" placeholder=" " inputmode="tel" autocomplete="tel" required><label for="f-telefone">Telefone com DDD</label><span class="msg">Informe um telefone com DDD, por exemplo (49) 99999-9999.</span></div>
+        <fieldset class="seg-opts">
+          <legend class="label">Assunto</legend>
+          <input type="radio" name="assunto" id="as-1" value="abrir-empresa" checked><label for="as-1">Abrir empresa</label>
+          <input type="radio" name="assunto" id="as-2" value="trocar-contador"><label for="as-2">Trocar de contador</label>
+          <input type="radio" name="assunto" id="as-3" value="imposto-de-renda"><label for="as-3">Imposto de Renda</label>
+          <input type="radio" name="assunto" id="as-4" value="outro"><label for="as-4">Outro</label>
+        </fieldset>
+        <div class="field"><textarea id="f-mensagem" name="mensagem" placeholder=" "></textarea><label for="f-mensagem">Mensagem</label></div>
+        <label class="check" id="lgpd"><input type="checkbox" id="f-lgpd" name="lgpd"><span>Autorizo a Contáser a usar meus dados para responder a este contato, conforme a <a href="privacidade.html">Política de Privacidade</a>.</span></label>
+        <div style="display:flex;justify-content:flex-end">
+          <button class="btn btn-primary lg" type="submit"><span>Enviar</span><span class="ico-pill"><svg class="mv" aria-hidden="true"><use href="#i-arrow"/></svg></span><i class="spin" aria-hidden="true"></i></button>
+        </div>
+      </form>
+      <div class="form-success" id="form-ok" tabindex="-1" hidden>
+        <div class="success-ring"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <h2 class="h3" id="form-ok-title">Mensagem enviada</h2>
+        <p class="small" style="margin:8px auto 20px;max-width:42ch"><span id="form-ok-text">Um contador vai responder em breve.</span> Se preferir, ligue para <a class="mono" href="tel:+554933225766" style="color:var(--accent-ink)">(49) 3322-5766</a>.</p>
+        <button class="btn btn-glass sm" id="form-again" type="button">Enviar outra mensagem</button>
+      </div>
+    </div>
+  </div>
+</section>
